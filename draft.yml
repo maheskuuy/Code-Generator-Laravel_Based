@@ -1,0 +1,27 @@
+models:
+  Crud_Tabel:
+    Id_tabel: primary big integer
+    Kolom_tabel: string:50
+    Tipe_data: enum(string, date, boolean, integer, long_text)
+    published_at: timestamp
+    softDeletes
+    relationships:
+      belongsTo:
+        Menu
+
+  Crud_Menu:
+    Id_menu: primary big integer
+    Kode_menu: char:8
+    Nama_menu: string:25
+    published_at: timestamp
+    softDeletes
+    Crud_tabel-id: id foreign
+
+seeders: Post, Comment
+
+controllers:
+  Crud_Tabel:
+    resource
+
+  Crud_Menu:
+    resource
