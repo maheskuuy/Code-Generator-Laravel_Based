@@ -1,0 +1,21 @@
+odels:
+  Interaksi_admin:
+    Id_interaksi: primary big integer:8
+    Key_generate: varchar:150
+    published_at: timestamp
+    softDeletes
+    relationships:
+      belongsTo:
+        menu_configuration & form_tables_configuration
+
+
+seeders: Interaksi_admin
+
+controllers:
+  Menu_Configuration:
+    resource
+    invokable
+    
+  Form_Tables_Configuration:
+    resource
+    invokable

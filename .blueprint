@@ -1,0 +1,27 @@
+created:
+    - app/Http/Controllers/Menu_ConfigurationController.php
+    - app/Http/Controllers/Form_Tables_ConfigurationController.php
+    - database/factories/InteraksiAdminFactory.php
+    - database/migrations/2024_04_01_064638_create_interaksi_admins_table.php
+    - app/Models/Interaksi_admin.php
+    - database/seeders/InteraksiAdminSeeder.php
+    - tests/Feature/Http/Controllers/Menu_ConfigurationControllerTest.php
+    - tests/Feature/Http/Controllers/Form_Tables_ConfigurationControllerTest.php
+    - app/Http/Requests/Menu_ConfigurationStoreRequest.php
+    - app/Http/Requests/Menu_ConfigurationUpdateRequest.php
+    - app/Http/Requests/Form_Tables_ConfigurationStoreRequest.php
+    - app/Http/Requests/Form_Tables_ConfigurationUpdateRequest.php
+    - resources/views/menuConfiguration/index.blade.php
+    - resources/views/menuConfiguration/create.blade.php
+    - resources/views/menuConfiguration/show.blade.php
+    - resources/views/menuConfiguration/edit.blade.php
+    - resources/views/menuConfiguration.blade.php
+    - resources/views/formTablesConfiguration/index.blade.php
+    - resources/views/formTablesConfiguration/create.blade.php
+    - resources/views/formTablesConfiguration/show.blade.php
+    - resources/views/formTablesConfiguration/edit.blade.php
+    - resources/views/formTablesConfiguration.blade.php
+updated:
+    - routes/web.php
+models:
+    Interaksi_admin: { Id_interaksi: 'primary big integer:8', Key_generate: 'varchar:150', published_at: timestamp, softdeletes: softDeletes, relationships: { belongsTo: 'menu_configuration & form_tables_configuration' } }
